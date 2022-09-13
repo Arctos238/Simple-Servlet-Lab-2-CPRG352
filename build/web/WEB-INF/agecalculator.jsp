@@ -1,7 +1,7 @@
 <%-- 
     Document   : agecalculator
     Created on : Sep. 12, 2022, 12:31:23 p.m.
-    Author     : H.Perry
+    Author     : Jacque Pointer
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

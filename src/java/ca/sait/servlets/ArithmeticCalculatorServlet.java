@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Arcto
+ * @author Jacque Pointer
  */
 public class ArithmeticCalculatorServlet extends HttpServlet {
 

@@ -1,7 +1,7 @@
 <%-- 
     Document   : arithmeticcalculator
     Created on : 12-Sep-2022, 8:35:20 PM
-    Author     : Jacque
+    Author     : Jacque Pointer
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
