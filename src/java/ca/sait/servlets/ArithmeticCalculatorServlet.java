@@ -49,8 +49,8 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
         String buttonPressed = request.getParameter("button");
 
         try {
-            double firstNumber = Integer.parseInt(firstNumberStr);
-            double secondNumber = Integer.parseInt(secondNumberStr);
+            double firstNumber = Double.parseDouble(firstNumberStr);
+            double secondNumber = Double.parseDouble(secondNumberStr);
 
             if (buttonPressed.equals("+")) {
                 result = (firstNumber + secondNumber) + "";
