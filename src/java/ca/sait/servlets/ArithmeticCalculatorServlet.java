@@ -28,14 +28,29 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        this.getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
         String result = request.getParameter("result");
         String firstNumberStr = request.getParameter("first_number");
         String secondNumberStr = request.getParameter("second_number");
         String buttonPressed = request.getParameter("button");
 
         try {
-            int firstNumber = Integer.parseInt(firstNumberStr);
-            int secondNumber = Integer.parseInt(secondNumberStr);
+            double firstNumber = Integer.parseInt(firstNumberStr);
+            double secondNumber = Integer.parseInt(secondNumberStr);
 
             if (buttonPressed.equals("+")) {
                 result = (firstNumber + secondNumber) + "";
@@ -54,22 +69,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
         request.setAttribute("first_number", firstNumberStr);
         request.setAttribute("second_number", secondNumberStr);
         request.setAttribute("result", result);
-
-        this.getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
+        
         this.getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
     }
 }

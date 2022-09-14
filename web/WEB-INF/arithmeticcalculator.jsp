@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Arithmetic Calculator</h1>
-        <form action="arithmetic" method="GET"> 
+        <form action="arithmetic" method="POST"> 
             <div>
                 <label>First:</label>
                 <input type="number" name="first_number" id="first_number" value="<%=request.getAttribute("first_number")%>"/>
