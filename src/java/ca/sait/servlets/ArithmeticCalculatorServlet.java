@@ -53,13 +53,13 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
             double secondNumber = Double.parseDouble(secondNumberStr);
 
             if (buttonPressed.equals("+")) {
-                result = (firstNumber + secondNumber) + "";
+                result = String.format("%.2f", (firstNumber + secondNumber));
             } else if (buttonPressed.equals("-")) {
-                result = (firstNumber - secondNumber) + "";
+                result = String.format("%.2f",(firstNumber - secondNumber));
             } else if (buttonPressed.equals("*")) {
-                result = (firstNumber * secondNumber) + "";
+                result = String.format("%.2f",(firstNumber * secondNumber));
             } else if (buttonPressed.equals("%")) {
-                result = (firstNumber / secondNumber) + "";
+                result = String.format("%.2f",(firstNumber / secondNumber));
             }
 
         } catch (Exception ex) {
